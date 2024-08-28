@@ -1,0 +1,29 @@
+<h2 mat-dialog-title class="dialog-title">Affectation des engins</h2>
+<mat-dialog-content>
+  <form [formGroup]="form" class="engins-form" >
+    <!-- Famille d'Engin -->
+    <mat-form-field appearance="outline" class="form-field full-width">
+      <mat-label>Famille d'Engin</mat-label>
+      <mat-select formControlName="nomFamille">
+        <mat-option *ngFor="let famille of familles" [value]="famille.name">
+          <img [src]="famille.image" alt="{{famille.name}}" class="famille-image">
+          {{ famille.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <!-- Type d'engin -->
+    <mat-form-field appearance="outline" class="form-field full-width">
+      <mat-label>Type d'engin</mat-label>
+      <mat-select formControlName="type">
+        <mat-option *ngFor="let engin of engins" [value]="engin">{{engin}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Annuler</button>
+  <button mat-button (click)="onSubmit()">Valider</button>
+</mat-dialog-actions>
+

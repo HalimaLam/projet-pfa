@@ -1,0 +1,136 @@
+/* Style pour le conteneur principal */
+.main-card {
+    padding: 1.5rem;
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style pour la carte personnalisée */
+  .custom-card {
+    background: #ffffff;
+    border: 2px solid #007bff; /* Cadre bleu autour de la carte */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+  }
+  
+  /* Style pour les champs de formulaire */
+  .custom-form-field {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  /* Style pour le conteneur de la table */
+  .table-container {
+    margin-top: 1rem;
+    overflow-x: auto;
+  }
+  
+  /* Style pour la table */
+  table.mat-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th.header-cell {
+    background-color: #0574a0; /* Bleu pour l'en-tête */
+    color: #ffffff;
+    font-weight: 600;
+    padding: 1rem;
+    text-align: left;
+  }
+  
+  td.cell {
+    padding: 1rem;
+    background-color: #ffffff; /* Blanc pour les cellules */
+  }
+  
+  tr.mat-row:hover {
+    background-color: #f8f9fa; /* Gris clair au survol */
+  }
+  
+  button.mat-icon-button {
+    color: #9fbac7; /* Bleu pour les icônes */
+    margin-right: 0.5rem;
+  }
+  
+  button.mat-icon-button:hover {
+    background-color: #e2e6ea; /* Gris clair au survol */
+  }
+  
+  mat-paginator {
+    margin-top: 1rem;
+    color: #444547; /* Bleu pour le paginator */
+  }
+  
+  /* Style pour le bouton de visualisation */
+  .visualiser-button {
+    color: #0574a0; /* Couleur bleue pour le bouton de visualisation */
+    background-color: transparent;
+    border: none;
+  }
+  
+  
+  /* Bordures autour de la table */
+  .table-container {
+    border: 1px solid #ddd; /* Bordure autour de la table */
+    border-radius: 4px; /* Coins arrondis pour un effet plus doux */
+    overflow: hidden; /* Assure que les coins arrondis sont appliqués correctement */
+  }
+  
+  /* Bordures autour des cellules d'en-tête */
+  th.mat-header-cell {
+    border-bottom: 2px solid #4caf50; /* Bordure inférieure plus épaisse pour l'en-tête */
+    padding: 16px; /* Padding pour l'en-tête */
+  }
+  
+  /* Bordures autour des cellules de données */
+  td.mat-cell {
+    border-bottom: 1px solid #ddd; /* Bordure inférieure pour les cellules de données */
+    padding: 16px; /* Padding pour les cellules */
+  }
+  
+  /* Bordure autour des lignes de la table */
+  tr.mat-row {
+    border-bottom: 1px solid #ddd; /* Bordure pour les lignes */
+  }
+  
+  /* Bordure autour des lignes d'en-tête */
+  tr.mat-header-row {
+    border-bottom: 2px solid #4caf50; /* Bordure plus épaisse pour les lignes d'en-tête */
+  }
+  /* Agrandir le conteneur de la table */
+  /* Agrandir le conteneur de la table */
+  .table-container {
+    width: 100%; /* Assure que la table utilise toute la largeur disponible */
+    overflow-x: auto; /* Permet le défilement horizontal si la table est trop large pour le conteneur */
+    margin: 0 auto; /* Centre le conteneur */
+  }
+  
+  /* Agrandir la table */
+  table.mat-table {
+    width: 100%; /* Assure que la table utilise toute la largeur du conteneur */
+    font-size: 18px; /* Augmente la taille de la police pour rendre les cellules plus grandes */
+  }
+  
+  /* Agrandir les cellules d'en-tête */
+  th.mat-header-cell {
+    padding: 20px; /* Augmente l'espace interne des cellules d'en-tête */
+    font-size: 18px; /* Augmente la taille de la police pour les cellules d'en-tête */
+    font-weight: bold; /* Rend le texte en gras pour les cellules d'en-tête */
+    text-align: center; /* Centre le texte dans les cellules d'en-tête */
+  }
+  
+  /* Agrandir les cellules de données */
+  td.mat-cell {
+    padding: 20px; /* Augmente l'espace interne des cellules de données */
+    font-size: 18px; /* Augmente la taille de la police pour les cellules de données */
+    font-weight: bold; /* Rend le texte en gras pour les cellules de données */
+  }
+  
+  /* Agrandir les lignes de la table */
+  tr.mat-row, tr.mat-header-row {
+    height: 70px; /* Augmente la hauteur des lignes */
+  }
+  

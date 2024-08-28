@@ -1,0 +1,94 @@
+<div class="col-md-12 d-flex justify-content-center">
+    <div class="card card-container p-4 shadow-lg" style="max-width: 400px; border-radius: 10px; background-color: #ffffff; border: 1px solid #001f3f;">
+        <!-- Profile Image -->
+        <div class="text-center mb-4">
+            <img
+                id="profile-img"
+                src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
+                class="profile-img-card"
+                alt="Profile Image"
+                style="border-radius: 50%; border: 3px solid #0574a0; width: 100px; height: 100px;"
+            />
+        </div>
+  
+        <!-- Login Form -->
+        <form
+            *ngIf="!isLoggedIn"
+            name="form"
+            (ngSubmit)="f.form.valid && onSubmit()"
+            #f="ngForm"
+            novalidate
+        >
+            <!-- Username Field -->
+            <div class="form-group mb-3">
+                <label for="username" class="form-label" style="color: #0574a0;">Nom d'utilisateur</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    name="username"
+                    [(ngModel)]="form.username"
+                    required
+                    #username="ngModel"
+                    style="border-radius: 5px; border: 1px solid #0574a0;"
+                />
+                <div
+                    class="alert alert-danger mt-2"
+                    role="alert"
+                    *ngIf="f.submitted && username.invalid"
+                >
+                    Le nom d'utilisateur est requis!
+                </div>
+            </div>
+  
+            <!-- Password Field -->
+            <div class="form-group mb-4">
+                <label for="password" class="form-label" style="color: #114d88;">Mot de passe</label>
+                <input
+                    type="password"
+                    class="form-control"
+                    name="password"
+                    [(ngModel)]="form.password"
+                    required
+                    minlength="6"
+                    #password="ngModel"
+                    style="border-radius: 5px; border: 1px solid #114d88;"
+                />
+                <div
+                    class="alert alert-danger mt-2"
+                    role="alert"
+                    *ngIf="f.submitted && password.invalid"
+                >
+                    <div *ngIf="password.errors?.['required']">Le mot de passe est requis</div>
+                    <div *ngIf="password.errors?.['minlength']">
+                        Le mot de passe doit contenir au moins 6 caractères
+                    </div>
+                </div>
+            </div>
+  
+            <!-- Login Button -->
+            <div class="d-grid">
+                <button class="btn" style="background-color: #0574a0; color: white; border-radius: 5px;">Se connecter</button>
+            </div>
+  
+            <!-- Error Message -->
+            <div class="form-group mt-3">
+                <div
+                    class="alert alert-danger"
+                    role="alert"
+                    *ngIf="f.submitted && isLoginFailed"
+                >
+                    La connexion a échoué: {{ errorMessage }}
+                </div>
+            </div>
+        </form>
+  
+        <!-- Register Link -->
+        <p class="text-center mt-4">Pas encore de compte ? <a href="/register" style="color: #001f3f;">Inscrivez-vous ici</a></p>
+  
+        <!-- Logged In Message -->
+        <div class="alert alert-success mt-4" *ngIf="isLoggedIn">
+            Connecté en tant que {{ roles }}.
+        </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,91 @@
+
+<mat-drawer-container>
+    <mat-drawer mode="side" [opened]="sideBarOpen">
+      <app-sidenav></app-sidenav>
+    </mat-drawer>
+    <mat-drawer-content>
+      <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+
+
+
+<div class="container">
+    <div class="table-container">
+      <div class="special-header">
+        <span class="table-title">Liste des Demandes</span>
+        <button mat-raised-button class="view-all-button" (click)="toggleViewAll()">
+          {{ showAll ? 'View Less' : 'View All' }}
+        </button>
+      </div>
+      <table mat-table [dataSource]="dataSource" class="custom-table">
+  
+        <!-- Colonne Entité -->
+        <ng-container matColumnDef="entite">
+          <th mat-header-cell *matHeaderCellDef class="header-cell">Entité</th>
+          <td mat-cell *matCellDef="let element" class="data-cell">{{element.entite}}</td>
+        </ng-container>
+  
+        <!-- Colonne Famille -->
+        <ng-container matColumnDef="familleEngin">
+          <th mat-header-cell *matHeaderCellDef class="header-cell">Famille</th>
+          <td mat-cell *matCellDef="let element" class="data-cell">{{element.familleEngin}}</td>
+        </ng-container>
+  
+        <!-- Colonne Poste -->
+        <ng-container matColumnDef="poste">
+          <th mat-header-cell *matHeaderCellDef class="header-cell">Poste</th>
+          <td mat-cell *matCellDef="let element" class="data-cell">{{element.poste}}</td>
+        </ng-container>
+  
+        <!-- Colonne Quantité -->
+        <ng-container matColumnDef="quantite">
+          <th mat-header-cell *matHeaderCellDef class="header-cell">Quantité</th>
+          <td mat-cell *matCellDef="let element" class="data-cell">{{element.quantite}}</td>
+        </ng-container>
+  
+        <!-- Colonne Raison de la Demande -->
+        <ng-container matColumnDef="raisonDemande">
+          <th mat-header-cell *matHeaderCellDef class="header-cell">Raison de la Demande</th>
+          <td mat-cell *matCellDef="let element" class="data-cell">{{element.raisonDemande}}</td>
+        </ng-container>
+  
+        <!-- Colonne Date de Sortie -->
+        <ng-container matColumnDef="releaseDate">
+          <th mat-header-cell *matHeaderCellDef class="header-cell">Date de Sortie</th>
+          <td mat-cell *matCellDef="let element" class="data-cell">{{element.releaseDate | date:'shortDate'}}</td>
+        </ng-container>
+  
+        <!-- Colonne Shift -->
+        <ng-container matColumnDef="shift">
+          <th mat-header-cell *matHeaderCellDef class="header-cell">Shift</th>
+          <td mat-cell *matCellDef="let element" class="data-cell">{{element.shift}}</td>
+        </ng-container>
+  
+        <!-- Colonne État -->
+        <ng-container matColumnDef="etat">
+          <th mat-header-cell *matHeaderCellDef class="header-cell">État</th>
+          <td mat-cell *matCellDef="let element" class="data-cell">{{element.etat}}</td>
+        </ng-container>
+  
+        <!-- Colonne Actions -->
+        <ng-container matColumnDef="action">
+          <th mat-header-cell *matHeaderCellDef class="header-cell">Action</th>
+          <td mat-cell *matCellDef="let element" class="data-cell">
+            <!-- Bouton Éditer (accent) -->
+            <button mat-icon-button color="accent" class="action-button" >
+                <mat-icon>edit</mat-icon>
+              </button>
+              <!-- Bouton Supprimer (warn) -->
+              <button mat-icon-button color="warn" >
+                <mat-icon>delete</mat-icon>
+              </button>
+          </td>
+        </ng-container>
+  
+        <!-- Header and Row Declarations -->
+        <tr mat-header-row *matHeaderRowDef="displayedColumns" class="header-row"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="data-row"></tr>
+      </table>
+    </div>
+  </div>
+</mat-drawer-content>
+</mat-drawer-container>

@@ -1,0 +1,88 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 0 20px; /* Ajoute un peu d'espace de chaque côté */
+    justify-content: center; /* Centre le contenu verticalement */
+  }
+  
+  .controle-card {
+    max-width: 1000px; /* Augmente la largeur maximale de la carte */
+    margin: 30px auto; /* Ajoute un espace autour de la carte et centre la carte horizontalement */
+    padding: 30px; /* Augmente l'espace intérieur de la carte */
+    border-radius: 12px; /* Arrondit les coins pour une apparence moderne */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+    background-color: #f9f9f9; /* Couleur de fond de la carte */
+  }
+  
+  .form-title {
+    font-size: 28px; /* Augmente la taille du titre */
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333; /* Couleur du texte */
+  }
+  
+  .form-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Augmente l'espace entre les champs du formulaire */
+  }
+  
+  .form-group {
+    flex: 1;
+    min-width: 350px; /* Augmente la largeur minimale des champs du formulaire */
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    width: 100%;
+  }
+  
+  .mat-form-field .mat-form-field-infix {
+    background-color: #ffffff; /* Couleur de fond des champs de texte */
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Augmente l'espace entre les boutons */
+    margin-top: 20px;
+  }
+  
+  .action-button {
+    min-width: 140px; /* Augmente la largeur minimale des boutons */
+  }
+  
+  /* Personnalisation des couleurs des boutons */
+  /* Couleur de fond mauve pour les boutons */
+  /* Couleur de fond mauve pour les boutons */
+  .custom-button-reverse {
+    background-color: #0574a0; /* Couleur de fond mauve pour "Retour" */
+    color: #ffffff; /* Couleur du texte pour "Retour" */
+    border-radius: 4px; /* Optionnel : pour arrondir les coins */
+    padding: 8px 16px; /* Optionnel : pour ajuster le padding */
+  }
+  
+  .custom-button-reverse:hover {
+    background-color: #0574a0; /* Couleur de fond au survol pour "Retour" */
+  }
+  
+  .custom-button-primary {
+    background-color: #0574a0; /* Couleur de fond mauve pour "Affecter" */
+    color: #ffffff; /* Couleur du texte pour "Affecter" */
+    border-radius: 4px; /* Optionnel : pour arrondir les coins */
+    padding: 8px 16px; /* Optionnel : pour ajuster le padding */
+  }
+  
+  .custom-button-primary:hover {
+    background-color: #0574a0; /* Couleur de fond au survol pour "Affecter" */
+  }
+  

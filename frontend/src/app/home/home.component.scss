@@ -1,0 +1,119 @@
+.page {
+    color: white;
+    padding: 0;
+    background: #ffffff;
+  }
+  
+  .page__content {
+    min-height: calc(100vh - 60px);
+    border-radius: 10px;
+    background: #eee;
+    color: rgb(250, 248, 248);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .dashboard-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 150px;
+    position: relative;
+    color: white; /* Default text color */
+    background-color: #ffffff; /* Default background color */
+  }
+  
+  .famille-card {
+    background-color: #ffffff; /* Specific color for Familles d'Engins Existantes */
+  }
+  
+  .traitees-card {
+    background-color: #ffffff; /* Specific color for Demandes Traitées */
+  }
+  
+  .non-traitees-card {
+    background-color: #ffffff; /* Specific color for Demandes Pas Encore Traitées */
+  }
+  
+  .utilisateur-card {
+    background-color: #ffffff; /* Specific color for Compte Utilisateur */
+  }
+  
+  .card-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #0574a0; /* Background color for the title */
+    color: #ffffff; /* Text color for the title */
+  }
+  
+  .card-logo {
+    width: 50px; /* Logo size */
+    height: 50px; /* Logo size */
+    margin-right: 10px; /* Spacing between logo and title */
+  }
+  
+  .card-title {
+    font-size: 14px; /* Font size for title */
+    font-weight: bold;
+  }
+  
+  .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #ffffff; /* Background color for details */
+    border-top: 1px solid #ffffff; /* Separator line for details */
+  }
+  
+  .card-link {
+    display: flex;
+    align-items: center;
+    color: #1e88e5; /* Text color for details */
+    text-decoration: none;
+    font-size: 12px; /* Font size for details text */
+  }
+  
+  .card-link mat-icon {
+    font-size: 18px; /* Font size for icon */
+    margin-left: 5px;
+  }
+  
+  .lists-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Gap between the two list containers */
+  }
+  
+  .list-container {
+    flex: 1; /* Allow containers to grow and shrink equally */
+    min-width: 0; /* Prevent shrinking too much */
+  }
+  .card-title-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .card-title-number {
+    font-size: 24px; /* Taille du texte pour les nombres */
+    font-weight: bold;
+    color: #ffffff; /* Couleur des chiffres */
+    margin-right: 10px; /* Espacement entre le nombre et le titre */
+  }
+  
+  .card-title {
+    font-size: 14px; /* Taille du texte pour le titre */
+    font-weight: bold;
+  }
+  

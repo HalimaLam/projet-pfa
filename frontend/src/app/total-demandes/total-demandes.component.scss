@@ -1,0 +1,138 @@
+/* Couleur d'arrière-plan de l'élément contenant le formulaire */
+.background-overlay {
+    background-color: #eee; /* Couleur de fond derrière le formulaire */
+    padding: 20px; /* Espacement autour du formulaire */
+    border-radius: 8px; /* Bordures arrondies si nécessaire */
+  }
+  
+  /* Styles de base pour la page */
+  .container {
+    max-width: 1000px; /* Réduire la largeur maximale pour une apparence plus compacte */
+    margin: 20px auto; /* Espacement supérieur et inférieur réduit */
+    position: relative; /* Positionner le conteneur pour gérer l'empilement */
+    z-index: 1; /* Assurer que le conteneur est au-dessus de l'arrière-plan */
+  }
+  
+  /* Conteneur pour le formulaire, ici stylisé séparément */
+  .table-container {
+    overflow-x: auto; /* Permet le défilement horizontal si nécessaire */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère pour un effet subtil */
+    background-color: #ffffff; /* Couleur de fond du formulaire */
+  }
+  
+  /* En-tête spécial */
+  .special-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background-color: #0c3574; /* Couleur de fond très claire pour la ligne spéciale */
+    border-bottom: 1px solid #ffffff; /* Bordure inférieure pour délimiter la ligne */
+    margin-bottom: 10px; /* Espacement entre la ligne spéciale et le tableau */
+  }
+  
+  .table-title {
+    font-size: 1.5em;
+    color: #ffffff; /* Couleur du titre en gris noir */
+    margin: 0;
+  }
+  
+  .view-all-button {
+    border: 1px solid #ffffff; /* Bordure bleue pour le bouton "View All" */
+    color: #ffffff; /* Couleur du texte bleue pour le bouton "View All" */
+    font-size: 0.9em;
+    padding: 6px 12px;
+    text-transform: none;
+    background: none; /* Pas de fond pour un look de cadre */
+  }
+  
+  .view-all-button:hover {
+    background-color: #f0f0f0; /* Couleur de fond au survol */
+  }
+  
+  .custom-table {
+    width: 100%; /* Prend toute la largeur disponible */
+    border-collapse: collapse; /* Enlève les espaces entre les cellules */
+  }
+  
+  .header-row {
+    background-color: #ffffff; /* Couleur de fond pour l'en-tête */
+  }
+  
+  .header-cell {
+    color: #333; /* Texte sombre pour l'en-tête */
+    font-size: 1em; /* Taille de police réduite */
+    padding: 12px;
+    text-align: left;
+    font-weight: normal;
+  }
+  
+  .data-row:nth-child(even) {
+    background-color: #f9f9f9; /* Couleur très claire pour les lignes alternées */
+  }
+  
+  .data-cell {
+    padding: 12px;
+    text-align: left;
+    font-size: 0.9em; /* Taille de police réduite */
+  }
+  
+  .engin-photo {
+    width: 100px; /* Taille de l'image réduite */
+    height: auto;
+    border-radius: 4px;
+    box-shadow: none; /* Pas d'ombre pour un look plus simple */
+  }
+  
+  .action-button {
+    margin: 0 4px;
+    font-size: 0.9em;
+    padding: 6px 12px;
+    text-transform: none; /* Supprimer la capitalisation automatique */
+    border: 1px solid #0574a0; /* Bordure bleue pour le bouton "Détails" */
+    color: #0574a0; /* Couleur du texte bleue pour le bouton "Détails" */
+    background: none; /* Pas de fond pour un look de cadre */
+  }
+  
+  .action-button:hover {
+    background-color: #f0f0f0; /* Couleur de fond au survol */
+  }
+  
+  .action-icon {
+    font-size: 24px; /* Taille de l'icône */
+    color: #0574a0; /* Couleur de l'icône */
+    cursor: pointer; /* Changer le curseur pour indiquer que c'est cliquable */
+    margin: 0 4px;
+  }
+  
+  .action-icon:hover {
+    color: #045a7e; /* Couleur au survol */
+  }
+  
+  .custom-edit-button {
+    color: #FF9800; /* Orange */
+  }
+  
+  .custom-delete-button {
+    color: #0e3faa; /* Rouge */
+  }
+  
+  :host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  mat-drawer {
+    width: 260px;
+  }
+  
+  mat-drawer-container {
+    height: 100%;
+  }
+  
+  mat-drawer {
+    background: #e5e7e7;
+  }
+  

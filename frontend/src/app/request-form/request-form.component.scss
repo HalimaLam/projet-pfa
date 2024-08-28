@@ -1,0 +1,36 @@
+.engins-form {
+    max-width: 600px; /* Augmente la largeur du formulaire */
+    margin: 0 auto;   /* Centre le formulaire horizontalement */
+  }
+  
+  .form-field.full-width {
+    width: 100%; /* Assure que les champs occupent toute la largeur disponible */
+  }
+  
+  .famille-image {
+    width: 32px; /* Augmente la taille des images */
+    height: 32px;
+    margin-right: 12px; /* Espace entre l'image et le texte */
+    vertical-align: middle;
+    border-radius: 50%; /* Rendre les images circulaires, optionnel */
+  }
+  
+  mat-dialog-content {
+    padding: 20px; /* Ajouter du padding autour du contenu */
+  }
+  
+  mat-dialog-actions {
+    display: flex;
+    justify-content: space-between; /* Espace entre les boutons */
+    padding: 16px 20px;
+  }
+  /* Style pour le titre dans le dialogue */
+  .dialog-title {
+    background-color: #0574a0; /* Bleu foncé */
+    color: #ffffff; /* Texte en blanc */
+    padding: 10px 15px; /* Espacement autour du texte */
+    border-radius: 4px; /* Coins arrondis */
+    font-size: 1.5rem; 
+    margin-bottom: 20px;/* Taille de police */
+  }
+  

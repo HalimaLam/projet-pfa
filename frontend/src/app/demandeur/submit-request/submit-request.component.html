@@ -1,0 +1,99 @@
+<div class="container mt-4">
+    <!-- Cadre avec fond personnalisé -->
+    <div class="card custom-card mb-4">
+      <div class="card-body text-center">
+        <h2 class="fs-4">Submit a request</h2>
+      </div>
+    </div>
+  
+    <!-- Afficher le message de succès -->
+    <div *ngIf="successMessage" class="alert alert-success text-center" role="alert">
+      {{ successMessage }}
+    </div>
+  
+    <div class="shadow p-4 rounded bg-light">
+      <form [formGroup]="requestForm" (ngSubmit)="postDemande()">
+        <!-- Ligne 1: Entités et Postes -->
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="entite" class="form-label fs-6">Entités</label>
+            <select id="entite" class="form-select form-select-sm" formControlName="entite">
+              <option *ngFor="let entite of entites" [value]="entite">{{ entite }}</option>
+            </select>
+            <div *ngIf="requestForm.get('entite')?.invalid && (requestForm.get('entite')?.dirty || requestForm.get('entite')?.touched)" class="text-danger">
+              Ce champ est requis.
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label for="poste" class="form-label fs-6">Postes</label>
+            <select id="poste" class="form-select form-select-sm" formControlName="poste">
+              <option *ngFor="let poste of postes" [value]="poste">{{ poste }}</option>
+            </select>
+            <div *ngIf="requestForm.get('poste')?.invalid && (requestForm.get('poste')?.dirty || requestForm.get('poste')?.touched)" class="text-danger">
+              Ce champ est requis.
+            </div>
+          </div>
+        </div>
+  
+        <!-- Ligne 2: Date de sortie et Shift -->
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="releaseDate" class="form-label fs-6">Date de sortie</label>
+            <input type="date" id="releaseDate" class="form-control form-control-sm" formControlName="releaseDate">
+            <div *ngIf="requestForm.get('releaseDate')?.invalid && (requestForm.get('releaseDate')?.dirty || requestForm.get('releaseDate')?.touched)" class="text-danger">
+              Ce champ est requis.
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label for="shift" class="form-label fs-6">Shift</label>
+            <select id="shift" class="form-select form-select-sm" formControlName="shift">
+              <option *ngFor="let shift of shifts" [value]="shift">{{ shift }}</option>
+            </select>
+            <div *ngIf="requestForm.get('shift')?.invalid && (requestForm.get('shift')?.dirty || requestForm.get('shift')?.touched)" class="text-danger">
+              Ce champ est requis.
+            </div>
+          </div>
+        </div>
+  
+        <!-- Ligne 3: Familles d'engins -->
+        <div class="row mb-3">
+          <div class="col-md-12">
+            <label for="familleEngin" class="form-label fs-6">Familles d'engins</label>
+            <select id="familleEngin" class="form-select form-select-sm" formControlName="familleEngin">
+              <option *ngFor="let famille of famillesEngins" [value]="famille">{{ famille }}</option>
+            </select>
+            <div *ngIf="requestForm.get('familleEngin')?.invalid && (requestForm.get('familleEngin')?.dirty || requestForm.get('familleEngin')?.touched)" class="text-danger">
+              Ce champ est requis.
+            </div>
+          </div>
+        </div>
+  
+        <!-- Ligne 4: Quantité et Raison de la demande -->
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="quantite" class="form-label fs-6">Quantité</label>
+            <input type="number" id="quantite" class="form-control form-control-sm" formControlName="quantite">
+            <div *ngIf="requestForm.get('quantite')?.invalid && (requestForm.get('quantite')?.dirty || requestForm.get('quantite')?.touched)" class="text-danger">
+              Ce champ est requis et doit être supérieur à 0.
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label for="raisonDemande" class="form-label fs-6">Raison de la demande</label>
+            <textarea id="raisonDemande" class="form-control form-control-sm" formControlName="raisonDemande"></textarea>
+            <div *ngIf="requestForm.get('raisonDemande')?.invalid && (requestForm.get('raisonDemande')?.dirty || requestForm.get('raisonDemande')?.touched)" class="text-danger">
+              Ce champ est requis.
+            </div>
+          </div>
+        </div>
+  
+        <!-- Boutons Soumettre et Rafraîchir -->
+        <div class="row">
+          <div class="col text-center">
+            <button type="submit" class="btn btn-success">Soumettre</button>
+            <button type="button" class="btn btn-danger ms-2" (click)="onReset()">Rafraîchir</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  

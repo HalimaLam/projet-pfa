@@ -1,0 +1,83 @@
+
+<div class="container-fluid page">
+    <div class="page__content shadow p-3">
+      <div class="dashboard-grid">
+        <!-- Rectangle 1: Demandes -->
+        <mat-card class="dashboard-card famille-card">
+          <div class="card-header">
+            <img src="assets/logo1.png" alt="Logo" class="card-logo">
+            <div class="card-title-container">
+              <span class="card-title-number">{{ totalDemandes }}</span>
+              <mat-card-title class="card-title">Demandes</mat-card-title>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a mat-button [routerLink]="['/total-demandes']" class="card-link">
+              Détails
+              <mat-icon>arrow_forward</mat-icon>
+            </a>
+          </div>
+        </mat-card>
+  
+        <!-- Rectangle 2: Demandes Traitées -->
+        <mat-card class="dashboard-card traitees-card">
+          <div class="card-header">
+            <img src="assets/logo2.png" alt="Logo" class="card-logo">
+            <div class="card-title-container">
+              <span class="card-title-number">{{ demandesTraitees }}</span>
+              <mat-card-title class="card-title">Demandes Traitées</mat-card-title>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a mat-button [routerLink]="['/demandes-traitees']" class="card-link">
+              Détails
+              <mat-icon>arrow_forward</mat-icon>
+            </a>
+          </div>
+        </mat-card>
+  
+        <!-- Rectangle 3: Demandes Pas Encore Traitées -->
+        <mat-card class="dashboard-card non-traitees-card">
+          <div class="card-header">
+            <img src="assets/logo3.png" alt="Logo" class="card-logo">
+            <div class="card-title-container">
+              <span class="card-title-number">{{ demandesNonTraitees }}</span>
+              <mat-card-title class="card-title">Pas Encore Traitées</mat-card-title>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a mat-button [routerLink]="['/demandes-non-traitees']" class="card-link">
+              Détails
+              <mat-icon>arrow_forward</mat-icon>
+            </a>
+          </div>
+        </mat-card>
+  
+        <!-- Rectangle 4: Compte Utilisateur -->
+        <mat-card class="dashboard-card utilisateur-card">
+          <div class="card-header">
+            <img src="assets/logo4.png" alt="Logo" class="card-logo">
+            <mat-card-title class="card-title">Compte Utilisateur</mat-card-title>
+          </div>
+          <div class="card-footer">
+            <a mat-button [routerLink]="['/compte-utilisateur']" class="card-link">
+              Détails
+              <mat-icon>arrow_forward</mat-icon>
+            </a>
+          </div>
+        </mat-card>
+      </div>
+  
+      <div class="lists-container">
+        <!-- Composant Demandes Liste -->
+        <div class="list-container">
+          <app-demandes-user></app-demandes-user>
+        </div>
+  
+        <!-- Composant Engin Photos -->
+        <div class="list-container">
+          <app-engin-photos></app-engin-photos>
+        </div>
+      </div>
+    </div>
+  </div>
